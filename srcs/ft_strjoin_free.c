@@ -12,29 +12,37 @@
 
 #include "libft.h"
 
+static char	*strjoin_classic(char *s1, char *s2)
+{
+	int		i;
+	char	*dest;
+
+	i = 0;
+	dest = malloc((ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!dest)
+		return (dest);
+	while (*s1)
+	{
+		dest[i] = *s1++;
+		i++;
+	}
+	while (*s2)
+	{
+		dest[i] = *s2++;
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
 char	*ft_strjoin_free(char *s1, char *s2)
 {
 	char	*dest;
-	int		i;
-	int		j;
 
 	if (!s1 || !s2)
 		return (NULL);
-	dest = malloc(ft_strlen(s1) + ft_strlen(s2) + 2);
-	if (!dest)
-	{
-		free(s1);
-		return (dest);
-	}
-	i = -1;
-	while (s1[++i])
-		dest[i] = s1[i];
-	j = -1;
-	if (s1)
-		dest[i++] = ' ';
-	while (s2[++j])
-		dest[i + j] = s2[j];
-	dest[i + j] = '\0';
+	dest = strjoin_classic(s1, s2);
 	free(s1);
+	free(s2);
 	return (dest);
 }

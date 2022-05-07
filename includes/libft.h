@@ -6,7 +6,7 @@
 /*   By: lseiller <lseiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 15:48:41 by lseiller          #+#    #+#             */
-/*   Updated: 2022/04/12 15:19:30 by lseiller         ###   ########.fr       */
+/*   Updated: 2022/05/07 16:25:33 by lseiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ t_list_l	*ft_lstmap(t_list_l *lst, void *(*f)(void *), void (*del)(void *));
 /* ************************************************************************** */
 
 int			ft_printf(const char *format, ...);
+int			ft_dprintf(int fd, const char *format, ...);
 
 int			ft_check_base(char *base);
 int			ft_putnbr_fd(long n, int fd);

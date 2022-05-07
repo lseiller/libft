@@ -6,7 +6,7 @@
 #    By: lseiller <lseiller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/14 15:50:51 by lseiller          #+#    #+#              #
-#    Updated: 2022/04/11 17:59:02 by lseiller         ###   ########.fr        #
+#    Updated: 2022/05/07 16:24:50 by lseiller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,8 @@ SRCS			=	ft_atoi.c \
 				ft_lstiter.c \
 				ft_lstmap.c \
 				ft_lstadd_back.c \
-				ft_strcmp.c
+				ft_strcmp.c \
+				ft_dprintf.c
 
 # COMPILED_SOURCES #
 OBJS 		=	$(SRCS:%.c=$(DIR_OBJS)%.o)

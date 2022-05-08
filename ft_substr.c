@@ -12,30 +12,14 @@
 
 #include "libft.h"
 
-static char	*ft_null_str(void)
-{
-	char	*strmalloc;
-
-	strmalloc = malloc(1 * sizeof(char));
-	if (!strmalloc)
-		return (NULL);
-	strmalloc[0] = '\0';
-	return (strmalloc);
-}
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*strmalloc;
 	int		i;
 
 	i = (int) start;
-	if (!s)
+	if (!s || start >= ft_strlen(s))
 		return (NULL);
-	if (start >= ft_strlen(s))
-	{
-		strmalloc = ft_null_str();
-		return (strmalloc);
-	}
 	else if (len >= ft_strlen(s))
 		strmalloc = malloc((ft_strlen(s) - start + 1) * sizeof(char));
 	else

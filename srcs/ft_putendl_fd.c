@@ -6,7 +6,7 @@
 /*   By: lseiller <lseiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 16:50:50 by lseiller          #+#    #+#             */
-/*   Updated: 2022/04/09 01:09:17 by lseiller         ###   ########.fr       */
+/*   Updated: 2022/06/06 14:21:07 by lseiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-
-	if (!s || !fd)
+	if (!s)
 		return ;
-	i = -1;
-	while (s[++i])
-		write(fd, s + i, 1);
+	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }

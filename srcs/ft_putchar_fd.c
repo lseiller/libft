@@ -6,7 +6,7 @@
 /*   By: lseiller <lseiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 16:45:54 by lseiller          #+#    #+#             */
-/*   Updated: 2022/04/09 01:09:17 by lseiller         ###   ########.fr       */
+/*   Updated: 2022/06/06 14:19:36 by lseiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
-	return (1);
+	return (write(fd, &c, 1));
 }

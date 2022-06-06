@@ -6,7 +6,7 @@
 /*   By: lseiller <lseiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 13:09:30 by lseiller          #+#    #+#             */
-/*   Updated: 2022/04/12 15:19:23 by lseiller         ###   ########.fr       */
+/*   Updated: 2022/06/06 14:46:21 by lseiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*strjoin_gnl(char *s1, char *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	dest = malloc((ft_strlen(s1) + ft_strlen(s2) + 1));
+	dest = ft_calloc((ft_strlen(s1) + ft_strlen(s2) + 1), sizeof(char));
 	if (dest == NULL)
 		return (NULL);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: lseiller <lseiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 12:02:31 by lseiller          #+#    #+#             */
-/*   Updated: 2022/04/12 15:19:42 by lseiller         ###   ########.fr       */
+/*   Updated: 2022/06/06 14:45:54 by lseiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*fill_no_nl(char *buffer)
 
 	size = ft_strlen(buffer);
 	i = 0;
-	line = malloc(size + 1);
+	line = ft_calloc(size + 1, sizeof(char));
 	if (!line)
 		return (NULL);
 	while (i < size)
@@ -40,7 +40,7 @@ char	*fill_nl(char *buffer)
 
 	size = ft_strchr(buffer, '\n') - buffer;
 	i = 0;
-	line = malloc(size + 2);
+	line = ft_calloc(size + 2, sizeof(char));
 	if (!line)
 		return (NULL);
 	while (i < size)
@@ -106,10 +106,9 @@ char	*get_next_line(int fd)
 		read_value = 1;
 	if (read_value <= 0)
 		return (NULL);
-	line = malloc(1);
+	line = ft_calloc(1, sizeof(char));
 	if (!line)
 		return (NULL);
-	line[0] = '\0';
 	line = fill_join(line, buffer[fd], fd, read_value);
 	return (line);
 }

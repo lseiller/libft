@@ -6,7 +6,7 @@
 /*   By: lseiller <lseiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 14:48:05 by lseiller          #+#    #+#             */
-/*   Updated: 2022/04/09 01:09:17 by lseiller         ###   ########.fr       */
+/*   Updated: 2022/06/06 14:24:04 by lseiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static char	*ft_trim_clean(char const *s, int start, int end)
 	char	*dest;
 
 	i = 0;
-	dest = malloc((end - start + 1) * sizeof(char));
+	dest = ft_calloc((end - start + 1), sizeof(char));
 	if (dest == NULL)
 		return (NULL);
 	while (start < end)
@@ -60,7 +60,7 @@ static int	ft_nb_of_word(char const *s, char c)
 	return (nbword);
 }
 
-static char	**ft_free_tab(char **dest, int j)
+char	**ft_free_tab(char **dest, int j)
 {
 	while (j >= 0)
 	{

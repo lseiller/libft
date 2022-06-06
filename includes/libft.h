@@ -6,7 +6,7 @@
 /*   By: lseiller <lseiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 15:48:41 by lseiller          #+#    #+#             */
-/*   Updated: 2022/05/07 16:25:33 by lseiller         ###   ########.fr       */
+/*   Updated: 2022/06/06 12:49:20 by lseiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # endif
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 2048
+#  define BUFFER_SIZE 1
 # endif
 
 # include <stdlib.h>
@@ -61,15 +61,21 @@ char		*ft_strnstr(const char *big, const char *little, size_t len);
 
 char		*ft_itoa(int n);
 //void	ft_putnbr_fd(int n, int fd);
+void		ft_free_split(char **split);
 int			ft_putchar_fd(char c, int fd);
 int			ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
+char		**ft_split_path(char const *s);
+char		**ft_free_tab(char **dest, int j);
 char		**ft_split(char const *s, char c);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
+char		*ft_strncut(char *str, char set, size_t size);
 void		ft_striteri(char *s, void (*f) (unsigned int, char*));
+char		*ft_strjoin_sep(char const *s1, char const *s2, char sep);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strmapi(char const *s, char (*f) (unsigned int, char));
+char		*ft_substr_set(char const *s, unsigned int start, char set);
 
 /* ************************************************************************** */
 

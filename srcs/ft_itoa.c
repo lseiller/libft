@@ -6,7 +6,7 @@
 /*   By: lseiller <lseiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 10:02:04 by lseiller          #+#    #+#             */
-/*   Updated: 2022/04/09 01:09:17 by lseiller         ###   ########.fr       */
+/*   Updated: 2022/06/06 14:47:15 by lseiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,9 @@ char	*ft_itoa(int n)
 
 	len = ft_intlen(n);
 	index = 1;
-	dest = malloc((len + 1) * sizeof(char));
+	dest = ft_calloc((len + 1), sizeof(char));
 	if (!dest)
 		return (NULL);
 	ft_strnbr(n, dest, index, len);
-	dest[len] = '\0';
 	return (dest);
 }

@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin_sep.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lseiller <lseiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/10 15:27:07 by lseiller          #+#    #+#             */
-/*   Updated: 2022/06/06 14:17:12 by lseiller         ###   ########.fr       */
+/*   Created: 2021/11/30 12:13:38 by lseiller          #+#    #+#             */
+/*   Updated: 2022/06/02 16:49:13 by lseiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list_l	*ft_lstnew(void *content)
+char	*ft_strjoin_sep(char const *s1, char const *s2, char sep)
 {
-	t_list_l	*list;
+	char	*dest;
+	int		len;
 
-	list = ft_calloc(1, sizeof(t_list_l));
-	if (!list)
+	if (!s1 || !s2)
 		return (NULL);
-	list->content = content;
-	list->next = NULL;
-	return (list);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	dest = ft_calloc((len + 2), sizeof(char));
+	if (!dest)
+		return (NULL);
+	while (*s1)
+		*dest++ = *s1++;
+	*dest++ = sep;
+	while (*s2)
+		*dest++ = *s2++;
+	return (dest - (len + 1));
 }

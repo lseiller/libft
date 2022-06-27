@@ -6,7 +6,7 @@
 #    By: lseiller <lseiller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/14 15:50:51 by lseiller          #+#    #+#              #
-#    Updated: 2022/06/06 12:52:08 by lseiller         ###   ########.fr        #
+#    Updated: 2022/06/27 12:45:22 by lseiller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ DIR_OBJS	=	objs/
 
 # FILES #
 SRCS			=	ft_atoi.c \
+				ft_atof.c \
 				ft_bzero.c \
 				ft_calloc.c \
 				ft_isalnum.c \

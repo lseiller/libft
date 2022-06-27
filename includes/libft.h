@@ -6,7 +6,7 @@
 /*   By: lseiller <lseiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 15:48:41 by lseiller          #+#    #+#             */
-/*   Updated: 2022/06/06 12:49:20 by lseiller         ###   ########.fr       */
+/*   Updated: 2022/06/27 12:44:54 by lseiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int			ft_isascii(int c);
 size_t		ft_strlen(const char *s);
 char		*ft_strdup(const char *s);
 int			ft_atoi(const char *nptr);
+double		ft_atof(const char *nptr);
 void		ft_bzero(void *s, size_t n);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);

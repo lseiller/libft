@@ -6,7 +6,7 @@
 /*   By: lseiller <lseiller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 15:39:37 by lseiller          #+#    #+#             */
-/*   Updated: 2022/06/29 23:01:35 by lseiller         ###   ########.fr       */
+/*   Updated: 2022/06/29 23:29:04 by lseiller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static double	ft_float_nb(const char *nptr)
 
 	atof = (char *)nptr;
 	final = 0;
-	n = 0;
+	n = 1;
 	while ((*atof >= 9 && *atof <= 13) || *atof == ' ')
 		atof++;
 	if (*atof == '-' || *atof == '+')
